@@ -22,7 +22,18 @@ namespace DataSetLoader
             {
                 case 1:
                     var accidentService = new AccidentService();
-                    accidentService.ProcessAccident();
+                    Console.Write("Would you like to skip lines? (Y/N): ");
+                    var skip = Console.ReadLine() == "Y" ? true : false;
+                    int linesToSkip;
+                    if (skip)
+                    {
+                        Console.WriteLine();
+                        Console.Write("How many lines would you like to skip? : ");
+                        linesToSkip = int.Parse(Console.ReadLine());
+                        accidentService.ProcessAccident(skip, linesToSkip);
+                        break;
+                    }
+                    accidentService.ProcessAccident(false);
                     break;
                 default:
                     Console.WriteLine();
