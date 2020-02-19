@@ -7,7 +7,7 @@ namespace DataSetLoader
 {
     public class AccidentService
     {
-        public void ProcessAccident(bool skipLines, int linesToSkip = 0)
+        public void ProcessAccidents(bool skipLines, int linesToSkip = 0)
         {
             Console.WriteLine();
             Console.Write("Please enter a file location to process from: ");

@@ -44,3 +44,49 @@ CREATE TABLE Accidents(
 	Police_Attended_Scene INT,
 	LOSA_of_Accident_Location VARCHAR(12)
 );
+GO
+
+CREATE TABLE Casualties(
+	Casualty_Id uniqueidentifier NOT NULL PRIMARY KEY,
+	Accident_Index VARCHAR(16) NOT NULL,
+	Vehicle_Reference INT,
+	Casualty_Reference INT,
+	Casualty_Class INT,
+	Sex_of_Casualty INT,
+	Age_of_Casualty INT,
+	Age_Band_of_Casualty INT,
+	Casualty_Severity INT,
+	Pedestrian_Location INT,
+	Pedestrian_Movement INT,
+	Car_Passenger INT,
+	Bus_or_Coach_Passenger INT,
+	Pedestrian_Road_Maintenance_Worker INT,
+	Casualty_Type INT,
+	Casualty_Home_Area_Type INT
+);
+GO
+
+CREATE TABLE Vehicles(
+	Vehicle_Id uniqueidentifier NOT NULL PRIMARY KEY,
+	Accident_Index VARCHAR(16) NOT NULL,
+	Vehicle_Reference INT,
+	Vehicle_Type INT,
+	Towing_and_Articulation INT,
+	Vehicle_Manoeuvre INT,
+	Vehicle_Location_Restricted_Lane INT,
+	Junction_Location INT,
+	Skidding_and_Overturning INT,
+	Hit_Object_off_Carriageway INT,
+	First_Point_of_Impact INT,
+	Was_Vehicle_Left_Hand_Driven INT,
+	Journey_Purpose_of_Driver INT,
+	Sex_of_Driver INT,
+	Age_of_Driver INT,
+	Age_Band_of_Driver INT,
+	Engine_Capacity_CC INT,
+	Propulsion_Code INT,
+	Age_of_Vehicle INT,
+	Driver_IMD_Decile INT,
+	Driver_Home_Area_Type INT
+);
+GO
