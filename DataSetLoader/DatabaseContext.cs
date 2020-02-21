@@ -56,7 +56,7 @@ namespace DataSetLoader
     public class Casualty
     {
         [Key]
-        public Guid Casualty_Id { get; set; }
+        public int Casualty_Id { get; set; }
         public string Accident_Index { get; set; }
         public int? Vehicle_Reference { get; set; }
         public int? Casualty_Reference { get; set; }
@@ -77,7 +77,7 @@ namespace DataSetLoader
     public class Vehicle
     {
         [Key]
-        public Guid Vehicle_Id { get; set; }
+        public int Vehicle_Id { get; set; }
         public string Accident_Index { get; set; }
         public int? Vehicle_Reference { get; set; }
         public int? Vehicle_Type { get; set; }

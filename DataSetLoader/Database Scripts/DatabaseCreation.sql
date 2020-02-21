@@ -47,7 +47,7 @@ CREATE TABLE Accidents(
 GO
 
 CREATE TABLE Casualties(
-	Casualty_Id uniqueidentifier NOT NULL PRIMARY KEY,
+	Casualty_Id INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
 	Accident_Index VARCHAR(16) NOT NULL,
 	Vehicle_Reference INT,
 	Casualty_Reference INT,
@@ -67,7 +67,7 @@ CREATE TABLE Casualties(
 GO
 
 CREATE TABLE Vehicles(
-	Vehicle_Id uniqueidentifier NOT NULL PRIMARY KEY,
+	Vehicle_Id INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
 	Accident_Index VARCHAR(16) NOT NULL,
 	Vehicle_Reference INT,
 	Vehicle_Type INT,
